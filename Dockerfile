@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     #libasound2\
     #libxtst6\ 
     && npm install -g @angular/cli@latest\
-    && npm install -g gulp\
+    #&& npm install -g gulp\
     && npm install -g typescript\
     && mkdir /root/bin /root/src && cd /root/src
     #&& mkdir /opt/vscode /opt/vscode-datadir
