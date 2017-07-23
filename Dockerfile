@@ -2,9 +2,9 @@ FROM node:latest
 MAINTAINER ifelsemonkey@gmail.com
 
 # Seems that I am compelled to have this as separate RUN commands
-RUN apt-get update && apt-get install -y --no-install-recommends apt-transport-https
-#    && wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -\
-#    && echo "deb http://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+RUN apt-get update && apt-get install -y --no-install-recommends apt-transport-https\
+    && wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -\
+    && echo "deb http://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
 
 RUN apt-get update && apt-get install -y --no-install-recommends\
     vim\
